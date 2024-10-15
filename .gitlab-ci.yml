@@ -1,0 +1,11 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - npm install -g @shopify/cli @shopify/theme
+    - shopify login --store your-store-name.myshopify.com
+    - shopify theme push --allow-live
+  only:
+    - master
