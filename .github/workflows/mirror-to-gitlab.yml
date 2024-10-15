@@ -20,7 +20,7 @@ jobs:
 
       - name: Push to GitLab
         env:
-          GITLAB_TOKEN: ${{ secrets.gldt-2ov_RwTXvKoAf6Uz-8Cd }}
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: |
-          git remote add gitlab https://oauth2:${{ secrets.gldt-2ov_RwTXvKoAf6Uz-8Cd }}@gitlab.com/phatmap234/shopify-gitlab.git
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.com/phatmap234/shopify-gitlab.git
           git push -u gitlab --all
