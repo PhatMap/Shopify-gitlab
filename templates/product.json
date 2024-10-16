@@ -41,6 +41,14 @@
             "swatch_shape": "circle"
           }
         },
+        "inventory_JxBeze": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -71,6 +79,7 @@
         "price",
         "judge_me_reviews_preview_badge_KiGedL",
         "variant_picker",
+        "inventory_JxBeze",
         "quantity_selector",
         "buy_buttons",
         "description",
