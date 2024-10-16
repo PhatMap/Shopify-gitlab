@@ -208,27 +208,7 @@
 
             <div id="paypal-button-container-{{ card_product.id }}"></div>
 
-            <script src="https://www.paypal.com/sdk/js?client-id=AeotlvV0aLem5P2XeShxwMl1_j07WDy1hDr-v0bra1wKVzAOlZXDp0oYNL5FSBLpeX33E2koFEfIWG6V" defer></script>
-
-            <script>
-              paypal.Buttons({
-                createOrder: function(data, actions) {
-                  return actions.order.create({
-                    purchase_units: [{
-                      amount: {
-                        value: '{{ card_product.price | money_without_currency }}' // Dùng giá của sản phẩm
-                      }
-                    }]
-                  });
-                },
-                onApprove: function(data, actions) {
-                  return actions.order.capture().then(function(details) {
-                    alert('Thanh toán thành công, cảm ơn ' + details.payer.name.given_name);
-                    window.location.href = "/invoice"; // Điều hướng sau khi thanh toán thành công
-                  });
-                }
-              }).render('#paypal-button-container-{{ card_product.id }}'); // Render nút PayPal vào thẻ div
-            </script>
+            
             
             {%- if card_product.quantity_price_breaks_configured? -%}
               {% if card_product.variants.size == 1 and quick_add == 'bulk' %}
