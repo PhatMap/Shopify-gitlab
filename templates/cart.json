@@ -44,7 +44,7 @@
     "custom_liquid_J9fXzL": {
       "type": "custom-liquid",
       "custom_css": [
-
+        ".elfsight-app-14a9a844-b1ef-4b2a-a088-6d39a3eabc93 {margin-right: 40px;}"
       ],
       "settings": {
         "custom_liquid": "<script src=\"https://static.elfsight.com/platform/platform.js\" async></script>\n<div class=\"elfsight-app-14a9a844-b1ef-4b2a-a088-6d39a3eabc93\" data-elfsight-app-lazy></div>",
